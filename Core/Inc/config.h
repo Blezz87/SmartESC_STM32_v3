@@ -4,8 +4,8 @@
 #define BRAKEMAX 175
 
 // speed limits for invividual modes in kph
-#define SPEEDLIMIT_ECO 9
-#define SPEEDLIMIT_NORMAL 20
+#define SPEEDLIMIT_ECO 25
+#define SPEEDLIMIT_NORMAL 35
 #define SPEEDLIMIT_SPORT 70
 
 // motor current limits for invividual modes in mA
