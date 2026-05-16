@@ -17,7 +17,7 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
     - name: log untrusted output
@@ -44,7 +44,7 @@ jobs:
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
     - run: python tools/xiaotea/Scripts/prepareZip_online.py      
     - name: 'Upload Artifact'
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         path: ${{ github.workspace }}/tools/zip_output
         name: M365_v3_build_${{ github.run_number }}
