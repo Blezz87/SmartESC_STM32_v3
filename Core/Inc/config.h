@@ -4,9 +4,9 @@
 #define BRAKEMAX 175
 
 // speed limits for invividual modes in kph
-#define SPEEDLIMIT_ECO 20
-#define SPEEDLIMIT_NORMAL 35
-#define SPEEDLIMIT_SPORT 70
+#define SPEEDLIMIT_ECO 32
+#define SPEEDLIMIT_NORMAL 32
+#define SPEEDLIMIT_SPORT 99
 
 // motor current limits for invividual modes in mA
 // note that hacked firmware allows up to 55amps motor phase current
