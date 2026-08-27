@@ -19,7 +19,7 @@
 
 #define SPEEDFILTER 3
 
-#define ADCTHROTTLE
+//#define ADCTHROTTLE
 //#define FAST_LOOP_LOG
 //#define DISABLE_DYNAMIC_ADC
 
@@ -42,7 +42,7 @@
 #define THROTTLEMAX 175
 #define BRAKEOFFSET 50
 #define BRAKEMAX 190
-#define THROTTLE_OVERRIDE
+//#define THROTTLE_OVERRIDE
 
 // parameters for speed calculation
 #define WHEEL_CIRCUMFERENCE 2290 //690 for original M365 motor
@@ -52,7 +52,7 @@
 #define SPEEDLIMIT_ECO 22
 #define SPEEDLIMIT_NORMAL 25
 #define SPEEDLIMIT_SPORT 99
-#define PUSHASSIST_CURRENT 300
+//#define PUSHASSIST_CURRENT 300
 
 // motor current limits for invividual modes in mA, see default settings at https://max.cfw.sh/#
 #define PH_CURRENT_MAX_ECO 16000
@@ -79,7 +79,7 @@
 
 // settings for speed PLL (angle estimation)
 #define SPEED_PLL 1 //1 for using PLL, 0 for angle extrapolation
-#define P_FACTOR_PLL 10 //7 for original M365 motor
-#define I_FACTOR_PLL 10 //7 for original M365 motor
+#define P_FACTOR_PLL 11 //7 for original M365 motor
+#define I_FACTOR_PLL 11 //7 for original M365 motor
 
 #endif /* CONFIG_H_ */
