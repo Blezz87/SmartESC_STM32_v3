@@ -19,9 +19,10 @@
 
 #define SPEEDFILTER 3
 
-//#define ADCTHROTTLE
+#define ADCTHROTTLE
 //#define FAST_LOOP_LOG
 //#define DISABLE_DYNAMIC_ADC
+#define PUSHASSIST_CURRENT 300
 
 // choose your display here
 #define DISPLAY_TYPE DISPLAY_TYPE_M365DASHBOARD
@@ -31,52 +32,54 @@
 #define CAL_I 38		// ADC counts * CAL_I = current in mA
 
 // gains for PI controls
-#define P_FACTOR_I_Q 100
+//PI-control factor settings
+#define P_FACTOR_I_Q 50
 #define I_FACTOR_I_Q 2
-#define P_FACTOR_I_D 100
-#define I_FACTOR_I_D 10
+#define P_FACTOR_I_D 50
+#define I_FACTOR_I_D 2
+#define P_FACTOR_SPEED 1
+#define I_FACTOR_SPEED 10
+
+#define P_FACTOR_PLL 10
+#define I_FACTOR_PLL 10
+
 
 // min and max values of throttle and brake signals in ADC counts
 #define THROTTLEOFFSET 45
 #define THROTTLEMAX 175
 #define BRAKEOFFSET 50
 #define BRAKEMAX 190
+#define THROTTLE_OVERRIDE
 
 // parameters for speed calculation
-#define WHEEL_CIRCUMFERENCE 550 //690 for original M365 motor
+#define WHEEL_CIRCUMFERENCE 2290 //690 for original M365 motor
 #define GEAR_RATIO 11 //15 for original M365 motor
 
 // speed limits for invividual modes in kph
 #define SPEEDLIMIT_ECO 6
-#define SPEEDLIMIT_NORMAL 20
-#define SPEEDLIMIT_SPORT 50
+#define SPEEDLIMIT_NORMAL 35
+#define SPEEDLIMIT_SPORT 99
 
 // motor current limits for invividual modes in mA, see default settings at https://max.cfw.sh/#
 #define PH_CURRENT_MAX_ECO 16000
-#define PH_CURRENT_MAX_NORMAL 28000
-#define PH_CURRENT_MAX_SPORT 55000
+#define PH_CURRENT_MAX_NORMAL 58000
+#define PH_CURRENT_MAX_SPORT 95000
 
 // motor current limit for regen in mA
-#define REGEN_CURRENT 20000
+#define REGEN_CURRENT 2000
 
 // maximum current for flux weakening in mA
 #define FW_CURRENT_MAX 18000 //max id
 
 // maximum battery currents in mA
-#define BATTERYCURRENT_MAX 14500
-#define REGEN_CURRENT_MAX 10000
+#define BATTERYCURRENT_MAX 58500
+#define REGEN_CURRENT_MAX 1000
 
 // battery voltage limits in mV
 #define BATTERYVOLTAGE_MIN 33000
 #define BATTERYVOLTAGE_MAX 42000
 
-
 // motor spinning direction
-#define REVERSE 1 //1 for original M365 motor
-
-// settings for speed PLL (angle estimation)
-#define SPEED_PLL 1 //1 for using PLL, 0 for angle extrapolation
-#define P_FACTOR_PLL 10 //7 for original M365 motor
-#define I_FACTOR_PLL 10 //7 for original M365 motor
+#define REVERSE 0 //1 for original M365 motor
 
 #endif /* CONFIG_H_ */
