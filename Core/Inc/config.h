@@ -19,7 +19,7 @@
 
 #define SPEEDFILTER 3
 
-//#define ADCTHROTTLE
+#define ADCTHROTTLE
 //#define FAST_LOOP_LOG
 //#define DISABLE_DYNAMIC_ADC
 
@@ -35,21 +35,24 @@
 #define I_FACTOR_I_Q 2
 #define P_FACTOR_I_D 100
 #define I_FACTOR_I_D 10
+#define MAX_D_FACTOR 1
 
 // min and max values of throttle and brake signals in ADC counts
 #define THROTTLEOFFSET 45
 #define THROTTLEMAX 175
 #define BRAKEOFFSET 50
 #define BRAKEMAX 190
+#define THROTTLE_OVERRIDE
 
 // parameters for speed calculation
-#define WHEEL_CIRCUMFERENCE 550 //690 for original M365 motor
+#define WHEEL_CIRCUMFERENCE 2290 //690 for original M365 motor
 #define GEAR_RATIO 11 //15 for original M365 motor
 
 // speed limits for invividual modes in kph
 #define SPEEDLIMIT_ECO 22
 #define SPEEDLIMIT_NORMAL 25
-#define SPEEDLIMIT_SPORT 50
+#define SPEEDLIMIT_SPORT 99
+#define PUSHASSIST_CURRENT 300
 
 // motor current limits for invividual modes in mA, see default settings at https://max.cfw.sh/#
 #define PH_CURRENT_MAX_ECO 16000
@@ -57,14 +60,14 @@
 #define PH_CURRENT_MAX_SPORT 55000
 
 // motor current limit for regen in mA
-#define REGEN_CURRENT 20000
+#define REGEN_CURRENT 2000
 
 // maximum current for flux weakening in mA
 #define FW_CURRENT_MAX 18000 //max id
 
 // maximum battery currents in mA
-#define BATTERYCURRENT_MAX 14500
-#define REGEN_CURRENT_MAX 10000
+#define BATTERYCURRENT_MAX 54500
+#define REGEN_CURRENT_MAX 1000
 
 // battery voltage limits in mV
 #define BATTERYVOLTAGE_MIN 33000
@@ -72,7 +75,7 @@
 
 
 // motor spinning direction
-#define REVERSE 1 //1 for original M365 motor
+#define REVERSE 0 //1 for original M365 motor
 
 // settings for speed PLL (angle estimation)
 #define SPEED_PLL 1 //1 for using PLL, 0 for angle extrapolation
