@@ -17,7 +17,7 @@
 #define TRIGGER_DEFAULT 2020
 #define _T 2028
 
-#define SPEEDFILTER 3
+#define SPEEDFILTER 2
 
 //#define ADCTHROTTLE
 //#define FAST_LOOP_LOG
