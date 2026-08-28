@@ -4,9 +4,9 @@
 #define BRAKEMAX 100
 
 // speed limits for invividual modes in kph
-#define SPEEDLIMIT_ECO 51
-#define SPEEDLIMIT_NORMAL 20
-#define SPEEDLIMIT_SPORT 50
+#define SPEEDLIMIT_ECO 25
+#define SPEEDLIMIT_NORMAL 32
+#define SPEEDLIMIT_SPORT 99
 
 // motor current limits for invividual modes in mA
 // note that hacked firmware allows up to 55amps motor phase current
@@ -22,23 +22,6 @@
 
 // ADC channels
 #define ADC_VOLTAGE 0
-#define ADC_THROTTLE 1
+#define ADC_THROTTLE 0
 #define ADC_TEMP 2
-
-#define LED_Pin GPIO_PIN_1
-#define LED_GPIO_Port GPIOD
-#define UART1_Tx_Pin GPIO_PIN_6
-#define UART1_Tx_GPIO_Port GPIOB
-#define BrakeLight_Pin GPIO_PIN_15
-#define BrakeLight_GPIO_Port GPIOA
-#define Temp_Pin GPIO_PIN_0
-#define Temp_GPIO_Port GPIOA
-#define Throttle_Pin GPIO_PIN_1
-#define Throttle_GPIO_Port GPIOA
-#define Batt_Voltage_Pin GPIO_PIN_2
-#define Batt_Voltage_GPIO_Port GPIOA
-#define PWR_BTN_Pin GPIO_PIN_14
-#define PWR_BTN_GPIO_Port GPIOC
-#define TPS_ENA_Pin GPIO_PIN_15
-#define TPS_ENA_GPIO_Port GPIOC
 
