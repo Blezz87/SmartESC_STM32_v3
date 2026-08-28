@@ -11,7 +11,7 @@
 
 //Dangerzone, do not touch!!
 #define DISPLAY_TYPE_M365DASHBOARD (1<<1)
-#define DISPLAY_TYPE_DEBUG (1<<0)							// For ASCII-Output in Debug mode);
+#define DISPLAY_TYPE_DEBUG (0<<0)							// For ASCII-Output in Debug mode);
 
 #define TRIGGER_OFFSET_ADC 50
 #define TRIGGER_DEFAULT 2020
@@ -21,7 +21,7 @@
 
 //#define ADCTHROTTLE
 //#define FAST_LOOP_LOG
-//#define DISABLE_DYNAMIC_ADC
+#define DISABLE_DYNAMIC_ADC
 
 // choose your display here
 #define DISPLAY_TYPE DISPLAY_TYPE_M365DASHBOARD
@@ -42,15 +42,15 @@
 #define THROTTLEMAX 175
 #define BRAKEOFFSET 50
 #define BRAKEMAX 190
-//#define THROTTLE_OVERRIDE
+#define THROTTLE_OVERRIDE
 
 // parameters for speed calculation
 #define WHEEL_CIRCUMFERENCE 2290 //690 for original M365 motor
 #define GEAR_RATIO 11 //15 for original M365 motor
 
 // speed limits for invividual modes in kph
-#define SPEEDLIMIT_ECO 22
-#define SPEEDLIMIT_NORMAL 25
+#define SPEEDLIMIT_ECO 25
+#define SPEEDLIMIT_NORMAL 32
 #define SPEEDLIMIT_SPORT 99
 //#define PUSHASSIST_CURRENT 300
 
@@ -78,7 +78,7 @@
 #define REVERSE 0 //1 for original M365 motor
 
 // settings for speed PLL (angle estimation)
-#define SPEED_PLL 1 //1 for using PLL, 0 for angle extrapolation
+#define SPEED_PLL 0 //1 for using PLL, 0 for angle extrapolation
 #define P_FACTOR_PLL 11 //7 for original M365 motor
 #define I_FACTOR_PLL 11 //7 for original M365 motor
 
